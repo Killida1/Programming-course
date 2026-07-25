@@ -1,14 +1,22 @@
 # Dotfiles
 
 ## What's here
-(one or two sentences — which config files this manages)
+This project manges dotfiles. bash profiles vim and more to come for personal config on the workstation.
+Etc workstation might get tracked in the future in relation to this project.
+
+It's all fun :D
 
 ## Setup
-git clone <your-repo-url> ~/dotfiles
-cd ~/dotfiles
-chmod +x install.sh
-./install.sh
+Clone the repo and run the install script — it symlinks every tracked
+config file into `$HOME`, overwriting anything already there:
+
+    git clone git@github.com:Killida1/Programming-course.git ~/dotfiles
+    cd ~/dotfiles
+    chmod +x install.sh
+    ./install.sh
 
 ## Notes
-(anything you'd want to remember 6 months from now — why you set it up
-this way, anything manual that install.sh doesn't handle, etc.)
+Symlinks. usr stands for unix system resource.
+git status
+git log -oneline -3
+/bin is a symlink to /usr/bin.
