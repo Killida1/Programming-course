@@ -2,16 +2,21 @@
 
 DOTFILES="$HOME/dotfiles"
 
+
 files=(
-    ".bashrc"
-    ".bash_logout"
-    ".profile"
+  ".bashrc"
+  ".bash_logout"
+  ".profile"
+  ".vimrc"
+  ".gitconfig"
+  ".config"
+  
 )
 
-echo "installing files"
-for file in "${files[@]}"; do
-    echo "Installing $file"
-    ln -sf "$DOTFILES/$file" "$HOME/$file"
-done
+echo "installing dotfiles..."
 
-echo "done installing files"
+for file in "${files[@]}"; do
+  echo "installing $file"
+  ln -sf "$DOTFILES/$file" "$HOME/$file"
+done
+echo "Finished Installing symlinks"
