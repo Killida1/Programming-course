@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOTFILES="$HOME/dotfiles"
+DOTFILES="$HOME/00-foundations-project/0.1-dotfiles-repo"
 
 
 files=(
