@@ -17,6 +17,6 @@ echo "installing dotfiles..."
 
 for file in "${files[@]}"; do
   echo "installing $file"
-  ln -sf "$DOTFILES/$file" "$HOME/$file"
+  ln -sfn "$DOTFILES/$file" "$HOME/$file"
 done
 echo "Finished Installing symlinks"

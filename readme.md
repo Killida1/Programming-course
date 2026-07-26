@@ -1,10 +1,11 @@
 # Dotfiles
 
 ## What's here
-This project manges dotfiles. bash profiles vim and more to come for personal config on the workstation.
-Etc workstation might get tracked in the future in relation to this project.
+This repo tracks my personal shell and editor config: `.bashrc`, `.bash_logout`,
+`.profile`, `.gitconfig`, `.vimrc`, and `.config`. Instead of configuring a
+machine by hand and losing the setup, everything lives here under version
+control and gets symlinked into `$HOME`.
 
-It's all fun :D
 
 ## Setup
 Clone the repo and run the install script — it symlinks every tracked
@@ -16,7 +17,11 @@ config file into `$HOME`, overwriting anything already there:
     ./install.sh
 
 ## Notes
-Symlinks. usr stands for unix system resource.
-git status
-git log -oneline -3
-/bin is a symlink to /usr/bin.
+- Files under `$HOME` are symlinks pointing back into `~/dotfiles`, not
+  copies — edits in either location show up in both, since it's the same
+  file on disk.
+- `/usr` historically stood for "user" (early Unix kept user home
+  directories there before `/home` existed) — not "Unix System Resources,"
+  a backronym that's commonly repeated but invented after the fact.
+- `install.sh` is idempotent: re-running it just re-creates the same
+  symlinks, so it's safe to run again after adding a new dotfile.
