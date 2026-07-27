@@ -10,7 +10,6 @@ files=(
   ".vimrc"
   ".gitconfig"
   ".config"
-  
 )
 
 echo "installing dotfiles..."
